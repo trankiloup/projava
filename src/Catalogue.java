@@ -1,6 +1,6 @@
 
 public class Catalogue {
-	private static String[] tabNoms = { "Stylo bleu", "Stylo rouge", "Cahier petit format", "Cahier grand format" };
+	public static String[] tabNoms = { "Stylo bleu", "Stylo rouge", "Cahier petit format", "Cahier grand format" };//Variable passe en public pour l affichage dans mon choix 1 du menu
 	private static double[] tabPrix = { 1.2, 1.25, 2.00, 3.00 };
 
 	public static void main(String[] args) {
@@ -63,7 +63,7 @@ public class Catalogue {
 	 */
 	public static void afficher() {
 		for (int i = 0; i <tabPrix.length; i++) {
-			System.out.println(getNom(i) + " = " + getPrix(i));
+			System.out.println(getNom(i) + " = " + getPrix(i)+"€");
 		}
 	}
 
@@ -111,10 +111,12 @@ public class Catalogue {
 	 */
 	public static int chercher(String nom) {
 		int indice=0;
-		while ((!(nom.equals(tabNoms[indice])) && indice<tabNoms.length-1)){indice++;}
-		if (indice == tabNoms.length-1) {indice=-1;}
+		while (indice<tabNoms.length && !(nom.equals(tabNoms[indice]))  ){indice++;}
+		if (indice == tabNoms.length) {indice=-1;}
 		// TODO Question 3.4
 		return indice;
+		
+		
 		
 	}
 }

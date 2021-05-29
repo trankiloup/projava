@@ -1,6 +1,6 @@
 
 public class Facture {
-	private static int[][] Prod = new int[0][];
+	public static int[][] Prod = new int[0][]; //passez de private a public pour pouvoir recuperer la longueur du tableau dans la calsse Menu
 	private static int[][] Quant = new int[0][];
 
 	/*
@@ -24,7 +24,7 @@ public class Facture {
 		ajouterProduit(numFacture, 2, 5);
 		//afficherFacture(numFacture);
 
-		afficher();
+		//afficher();
 
 	}
 
@@ -97,3 +97,4 @@ public class Facture {
 	}
 
 }
+
