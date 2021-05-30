@@ -44,7 +44,7 @@ public class Catalogue {
 	 */
 	public static String getNom(int numProduit) {
 
-		return tabNoms[numProduit];
+		return tabNoms[numProduit]; //Pour recupere le nom on rentre son numeros
 	}
 
 	/**
@@ -55,7 +55,7 @@ public class Catalogue {
 	 */
 	public static double getPrix(int numProduit) {
 		// TODO Question 3.1
-		return tabPrix[numProduit];
+		return tabPrix[numProduit];	//idem pour le prix
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class Catalogue {
 	public static void afficher() {
 		System.out.print("\n**********************\n-----CATALOGUE-----\n\n");
 		for (int i = 0; i <tabPrix.length; i++) {
-		System.out.println("*N=˚"+i +": "+getNom(i) + "  => prix: " +getPrix(i)+"€");
+		System.out.println("*N=˚"+i +": "+getNom(i) + "  => prix: " +getPrix(i)+"€"); //on va de case en case pour recuperer les noms et pris avec l appel de fonction getPrix et getNom
 		}
 		System.out.println("\n*******************************");
 	}
@@ -94,6 +94,7 @@ public class Catalogue {
 		tamptabprix[tamptabprix.length-1]= prix;
 		tabNoms=tamptabnom;
 		tabPrix=tamptabprix;
+		
 		// TODO Question 3.3
 
 	}
