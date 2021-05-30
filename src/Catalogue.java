@@ -62,9 +62,11 @@ public class Catalogue {
 	 * affiche le catalogue � l'�cran.
 	 */
 	public static void afficher() {
+		System.out.print("\n**********************\n-----CATALOGUE-----\n\n");
 		for (int i = 0; i <tabPrix.length; i++) {
-			System.out.println(getNom(i) + " = " + getPrix(i)+"€");
+		System.out.println("*N=˚"+i +": "+getNom(i) + "  => prix: " +getPrix(i)+"€");
 		}
+		System.out.println("\n*******************************");
 	}
 
 	/**

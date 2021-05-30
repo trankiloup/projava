@@ -68,7 +68,7 @@ public class Facture {
 	 * @param numFacture numéro de la facture
 	 */
 	public static void afficherFacture(int numFacture) {
-		System.out.println("Facture n˚" + numFacture);
+		System.out.println("Facture n˚" + numFacture+"\n");
 		double total =0;
 		for (int i = 0; i < Prod[numFacture].length; i++) {
 		String nom=Catalogue.getNom(Prod[numFacture][i]) ;
@@ -77,8 +77,8 @@ public class Facture {
 		total=total+prix*quant;
 		System.out.println(nom + " ("+ prix+"€ par piece) x "+quant+" pieces = "+ quant*prix + "€" );
 		}
-		System.out.println("Montant total:"+ total+"€");
-
+		System.out.println("\nMontant total:"+ total+"€");
+		System.out.println("\n---------------------------\n");
 		// TODO Question 4.4
 
 	}
@@ -87,14 +87,16 @@ public class Facture {
 	 * affiche toutes les factures.
 	 */
 	public static void afficher() {
+		System.out.println("\n\n*********************-Facturier-*************************\n");
 		
 		for(int i=0;i<Prod.length;i++) {
 			afficherFacture(i);
 			
-		}
+		
 		// TODO Question 4.5
 
 	}
+		System.out.println("\n*******************************************************\n");}
 
 }
 
